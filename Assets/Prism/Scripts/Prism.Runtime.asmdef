@@ -1,7 +1,11 @@
 {
   "name": "Prism.Runtime",
   "rootNamespace": "Prism",
-  "references": [],
+  "references": [
+    "Unity.XR.ARFoundation",
+    "Unity.XR.ARSubsystems",
+    "Unity.XR.CoreUtils"
+  ],
   "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,

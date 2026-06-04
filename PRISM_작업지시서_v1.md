@@ -29,7 +29,7 @@
 **선행조건**: WO-0.
 
 **산출물**
-- `Scripts/Data/`: `TrackedImageInfo`(struct, 설계 5.3).
+- `Scripts/Data/`: `ImageTrackingState`(enum), `TrackedImageInfo`(struct, 설계 5.3).
 - `Scripts/AR/`: `IImageTrackingService`(설계 5.3) + 구현체 `ImageTrackingService`(`ARTrackedImageManager` 래핑).
 - 씬 세팅 가이드: `XROrigin`+`ARSession`+`ARTrackedImageManager` 구성 메모(README 또는 주석).
 - 중복 인식 방지(쿨다운/플래그, 설계 5.4).

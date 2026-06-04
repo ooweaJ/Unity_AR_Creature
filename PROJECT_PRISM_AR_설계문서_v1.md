@@ -142,10 +142,12 @@ public readonly struct TrackedImageInfo {
     public readonly string referenceImageName; // 베이스 바인딩 키 (6.7)
     public readonly Pose worldPose;            // 월드 위치/회전
     public readonly RectInt screenBounds;      // 화면상 영역 → 픽셀 샘플링용 (6.6)
-    public readonly TrackingState trackingState;
+    public readonly ImageTrackingState trackingState;
 }
+
+public enum ImageTrackingState { None, Limited, Tracking }
 ```
-> 구현체 `ImageTrackingService`는 `ARTrackedImageManager`를 래핑해 AR Foundation 타입을 도메인 이벤트로만 노출. Gameplay 레이어는 `ARTrackedImage`를 직접 모른다.
+> 구현체 `ImageTrackingService`는 `ARTrackedImageManager`를 래핑해 AR Foundation 타입을 도메인 이벤트로만 노출. Gameplay 레이어는 `ARTrackedImage`나 `TrackingState`를 직접 모른다.
 
 ### 5.4 중복 인식 방지
 - 같은 이미지를 짧은 시간 내 재인식 시 쿨다운·이미 생성됨 플래그로 중복 생성 차단.
