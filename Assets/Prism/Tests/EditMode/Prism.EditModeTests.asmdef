@@ -3,7 +3,8 @@
   "rootNamespace": "Prism.Tests",
   "references": [
     "Prism.Runtime",
-    "Unity.XR.ARSubsystems"
+    "Unity.XR.ARSubsystems",
+    "Unity.XR.ARFoundation"
   ],
   "includePlatforms": [
     "Editor"
