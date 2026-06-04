@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e823d0cdfb63549b99a015b6158c73, type: 3}
+  m_Name: SampleCreatureDatabase
+  m_EditorClassIdentifier: Prism.Runtime::Prism.Data.CreatureDatabase
+  bindings:
+  - {fileID: 11400000, guid: 55eae11c84241444eb6e1b7ab2bc9f57, type: 2}
+  archetypes:
+  - {fileID: 11400000, guid: 4dfd79b37f8b6d84192e6ed933977c36, type: 2}
