@@ -321,10 +321,12 @@ public interface IPlacementService {
 
 public interface IAnchorHandle {
     Transform Transform { get; }                  // 크리처를 이 자식으로 부착
-    TrackingState TrackingState { get; }
-    event Action<TrackingState> TrackingStateChanged;
+    AnchorTrackingState TrackingState { get; }
+    event Action<AnchorTrackingState> TrackingStateChanged;
     void Dispose();                               // 앵커 해제
 }
+
+public enum AnchorTrackingState { None, Limited, Tracking }
 ```
 > 배치 흐름: `TryRaycastPlane` → `CreateAnchor` → `CreatureFactory.Build(data, handle.Transform)`. 배치 서비스는 크리처를 직접 만들지 않고 앵커만 책임(관심사 분리).
 

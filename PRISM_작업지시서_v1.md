@@ -71,11 +71,13 @@
 **선행조건**: WO-0.
 
 **산출물**
-- `Scripts/AR/`: `IPlacementService`+구현(`ARRaycastManager`/`ARAnchorManager` 래핑), `IAnchorHandle`+구현(`ARAnchor` 래핑, 설계 7.7b).
+- `Scripts/Data/`: `AnchorTrackingState`(enum).
+- `Scripts/AR/`: `IPlacementService`+구현(`ARRaycastManager`/`ARAnchor` 래핑), `IAnchorHandle`+구현(`ARAnchor` 래핑, 설계 7.7b).
 
 **동작 명세**
 - `TryRaycastPlane(screenPos, out pose)`: `PlaneWithinPolygon` 히트.
 - `CreateAnchor(pose)` → `IAnchorHandle`(Transform 노출, `TrackingStateChanged` 이벤트, `Dispose`).
+- `IAnchorHandle`은 `TrackingState` 등 AR Foundation 타입을 노출하지 않고 `AnchorTrackingState`로 매핑한다.
 - `PlaneAvailabilityChanged`로 배치 가능 평면 존재 여부 통지.
 - 배치 서비스는 크리처를 만들지 않는다(앵커만).
 

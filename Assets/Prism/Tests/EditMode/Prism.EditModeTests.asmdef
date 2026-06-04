@@ -2,7 +2,8 @@
   "name": "Prism.EditModeTests",
   "rootNamespace": "Prism.Tests",
   "references": [
-    "Prism.Runtime"
+    "Prism.Runtime",
+    "Unity.XR.ARSubsystems"
   ],
   "includePlatforms": [
     "Editor"
