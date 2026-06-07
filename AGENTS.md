@@ -29,7 +29,7 @@
 
 ## 폴더 구조
 ```
-Assets/Prism/
+Assets/_Prism/
   Scripts/AR/         # AR Abstraction 구현체 (AR Foundation 의존 허용)
   Scripts/Gameplay/   # 생성·크리처·대전·수집 (AR 타입 참조 금지)
   Scripts/Data/       # CreatureData, enum, ScriptableObject 정의
